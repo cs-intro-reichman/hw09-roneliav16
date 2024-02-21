@@ -40,7 +40,7 @@ public class LanguageModel {
 	// characters in the given list. */
 	public void calculateProbabilities(List probs) {
         ListIterator lIterator = probs.listIterator(0);			
-        int countCharacters = 0;
+        double countCharacters = 0;
         while (lIterator.hasNext()) {
             countCharacters += lIterator.current.cp.count;
             lIterator.next();
@@ -49,7 +49,7 @@ public class LanguageModel {
         lIterator = probs.listIterator(0);			
         double cumulativePrev = 0;
         while (lIterator.hasNext()) {
-            lIterator.current.cp.p = ((double)countCharacters) / lIterator.current.cp.count;
+            lIterator.current.cp.p = ((double)countCharacters) / (double)lIterator.current.cp.count;
             lIterator.current.cp.cp = cumulativePrev + lIterator.current.cp.p;
             cumulativePrev = lIterator.current.cp.cp;
             lIterator.next();
