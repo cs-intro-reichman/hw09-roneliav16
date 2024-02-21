@@ -17,14 +17,6 @@ public class List {
         size = 0;
     }
 
-    public static void main (String args []) {
-        String str = "Committee ";
-        List list = new List();
-        for (int i = 0; i < str.length(); i++) {
-            list.update(str.charAt(i)); 
-        }
-        System.out.println(list);
-    }
 
     /** Returns the number of elements in this list. */
     public int getSize() {
@@ -116,7 +108,9 @@ public class List {
             throw new IndexOutOfBoundsException();
         }
         current = this.first;
-        for(int i = 0; i < index; i++) current = current.next;
+        for(int i = 0; i < index; i++) {
+            current = current.next;
+            }
         return current.cp.chr;
     }
 
