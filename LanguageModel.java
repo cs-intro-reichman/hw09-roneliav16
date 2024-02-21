@@ -54,13 +54,12 @@ public class LanguageModel {
             current.cp.p = pIRatio;
             cumulativePrev = pIRatio;
         }
-        double ratio = (double) countCharacters /;
  	}
 
     // Returns a random character from the given probabilities list.
 	public char getRandomChar(List probs) {
 		// Your code goes here
-        return '';
+        return ' ';
 	}
 
     /**
