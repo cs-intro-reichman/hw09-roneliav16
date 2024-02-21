@@ -61,7 +61,7 @@ public class LanguageModel {
 		double r = Math.random();
         ListIterator listItr = probs.listIterator(0);
         while (listItr.hasNext()) {
-            if (listItr.current.cp.cp >= r) {
+            if (listItr.current.cp.cp > r) {
                 return listItr.current.cp.chr;
             }
             listItr.next();
