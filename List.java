@@ -24,7 +24,7 @@ public class List {
 
     /** Returns the first element in the list */
     public CharData getFirst() {
-        return first;
+        return first.cp;
     }
 
     /** GIVE Adds a CharData object with the given character to the beginning of this list. */
