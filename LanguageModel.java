@@ -50,7 +50,7 @@ public class LanguageModel {
         double cumulativePrev = 0;
         while (lIterator.hasNext()) {
             lIterator.current.cp.p = (double) countCharacters / lIterator.current.cp.count;
-            lIterator.current.cp.cp = cumulativePrev + current.cp.p;
+            lIterator.current.cp.cp = cumulativePrev + lIterator.current.cp.p;
             cumulativePrev = lIterator.current.cp.cp;
             lIterator.next();
         }
