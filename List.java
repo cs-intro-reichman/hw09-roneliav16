@@ -107,7 +107,7 @@ public class List {
         if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException();
         }
-        current = this.first;
+        Node current = this.first;
         for(int i = 0; i < index; i++) {
             current = current.next;
             }
