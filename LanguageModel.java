@@ -49,7 +49,7 @@ public class LanguageModel {
         lIterator = probs.listIterator(0);			
         double cumulativePrev = 0;
         while (lIterator.hasNext()) {
-            lIterator.current.cp.p = (double) lIterator.current.cp.count / ountCharacters;
+            lIterator.current.cp.p = (double) lIterator.current.cp.count / countCharacters;
             lIterator.current.cp.cp = cumulativePrev + lIterator.current.cp.p;
             cumulativePrev = lIterator.current.cp.cp;
             lIterator.next();
