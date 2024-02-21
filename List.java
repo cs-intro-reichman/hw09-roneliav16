@@ -17,7 +17,6 @@ public class List {
         size = 0;
     }
 
-
     /** Returns the number of elements in this list. */
     public int getSize() {
  	      return size;
@@ -111,7 +110,7 @@ public class List {
         for(int i = 0; i < index; i++) {
             current = current.next;
             }
-        return current.cp.chr;
+        return current.cp;
     }
 
     /** Returns an array of CharData objects, containing all the CharData objects in this list. */
